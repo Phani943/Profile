@@ -8,7 +8,7 @@
 {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 6, 10, 0.6), rgba(4, 9, 10, 0.6)), url(images/washington.jpg);
+    background-image: linear-gradient(rgba(4, 6, 10, 0.6), rgba(4, 9, 10, 0.6)), url(washington.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -86,7 +86,7 @@ nav
     margin: auto;
     text-align: center;
     padding-top: 100px;
-    background-image: linear-gradient(rgba(4, 6, 10, 0.6), rgba(4, 9, 10, 0.6)), url(images/london.jpg);
+    background-image: linear-gradient(rgba(4, 6, 10, 0.6), rgba(4, 9, 10, 0.6)), url(london.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -155,7 +155,7 @@ h2
     margin: auto;
     text-align: center;
     padding-top: 10px;
-    background-image: linear-gradient(rgba(4, 6, 10, 0.6), rgba(4, 9, 10, 0.6)), url(images/newyork.jpg);
+    background-image: linear-gradient(rgba(4, 6, 10, 0.6), rgba(4, 9, 10, 0.6)), url(newyork.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -202,7 +202,7 @@ h2
     margin: auto;
     text-align: center;
     padding-top: 100px;
-    background-image: linear-gradient(rgba(4, 6, 10, 0.6), rgba(4, 9, 10, 0.6)), url(images/banner_1.jpg);
+    background-image: linear-gradient(rgba(4, 6, 10, 0.6), rgba(4, 9, 10, 0.6)), url(banner_1.jpg);
     background-size: cover;
     background-position: center;
 }
