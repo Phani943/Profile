@@ -596,6 +596,77 @@ body {
     padding-top: 1px;
 }
 
+.custom_select {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.selected_value {
+    width: 25%;
+    padding: 10px;
+    border: 2px solid #44e324;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.selected_value i {
+    margin-left: 10px;
+}
+
+.fa-caret-down {
+    transition: transform ease;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
+
+
+.custom_options {
+    display: none;
+    width: 25%;
+    padding: 10px;
+    border-radius: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 2px solid #44e324;
+    background-color: black;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 16px;
+    position: absolute;
+    top: 110%;
+    z-index: 1;
+}
+
+.custom_options::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom_options::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 16px;
+}
+
+.custom_options::-webkit-scrollbar-thumb {
+    background: #44e324;
+    border-radius: 16px;
+}
+
+.custom_option {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.custom_option:hover {
+    border-radius: 16px;
+    background: rgba(68, 227, 36, 0.7);
+}
+
 .projects_container {
     display: flex;
     flex-wrap: nowrap;
@@ -606,6 +677,19 @@ body {
     margin-top: 50px;
     scrollbar-width: thin;
     scrollbar-color: #44e324 #1d1515;
+}
+
+.no-projects-message {
+    width: 100%;
+    background-color: #000;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 38px;
+    background: linear-gradient(45deg, #44e324, #974e35, #ff0099);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #44e324;
 }
 
 .projects_container::-webkit-scrollbar {
@@ -650,6 +734,22 @@ body {
     color: #ccc;
 }
 
+.project_info a {
+    border: 2px solid #44e324;
+    padding: 8px 10px;
+    border-radius: 40px;
+}
+
+.project_info a span {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    vertical-align: middle;
+}
+
+.project_info a .bx {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
 .project a {
     display: inline-block;
     margin-top: 16px;
@@ -657,9 +757,29 @@ body {
     text-decoration: none;
 }
 
+.project a i {
+    color: #44e324;
+}
+
 .project:hover {
     background-color: #000000;
     transform: translateY(-10px);
+}
+
+.project:hover a {
+    border: 2px solid #44e324;
+}
+
+.project a:hover {
+    background-color: #44e324;
+    color: #000000;
+    box-shadow: 0 0 5px #44e324,
+        0 0 10px #44e324,
+        0 0 20px #44e324;
+}
+
+.project a:hover .bx {
+    color: #000000;
 }
 
 .contact {
@@ -984,12 +1104,78 @@ footer .top i {
         align-items: flex-start;
     }
 
+    .home_content {
+        height: 300px;
+    }
+
+    .home img {
+        height: 240px;
+        align-self: flex-end;
+    }
+
     .home_content h1 {
         font-size: 20px;
     }
 
     .home_content p {
-        font-size: 16px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .skills_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skills_container .container1 .technical_bars {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills_container .container1 .technical_bars .bar {
+        width: 80%;
+    }
+
+    .framework_used .set1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .softwares_used {
+        display: flex;
+        align-items: center;
+    }
+
+    .softwares_used .software {
+        width: 80%;
+    }
+
+    .softwares_used .software .info {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .softwares_used .software .info span {
+        margin-right: 40px;
+    }
+
+    .custom_select {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .selected_value {
+        width: 90%;
+        margin-top: 40px;
+    }
+
+    .custom_options {
+        width: 90%;
     }
 }
 
@@ -1003,7 +1189,6 @@ footer .top i {
 
     .header a {
         margin-left: 14px;
-
     }
 
     .menu-toggle {
@@ -1016,7 +1201,7 @@ footer .top i {
         border-radius: 50%;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
-    
+
     .menu-toggle i {
         font-size: 20px;
         color: #000000;
@@ -1067,7 +1252,7 @@ footer .top i {
     }
 
     .section_title {
-        font-size: 50px;
+        font-size: 60px;
     }
 
     .skills_container {
@@ -1097,6 +1282,9 @@ footer .top i {
 
     .home img {
         margin-top: 90px;
+        align-self: center;
+        width: 300px;
+        height: 300px;
     }
 
     .home_content h1 {
@@ -1179,6 +1367,18 @@ footer .top i {
         width: 80%;
     }
 
+    .framework_used .set1 .framework:hover {
+        font-size: 8px;
+    }
+
+    .softwares_used {
+        width: 100%;
+    }
+
+    .softwares_used .software .info span {
+        font-size: 12px;
+    }
+
     .projects_container {
         flex-direction: column;
         align-items: center;
@@ -1230,4 +1430,3 @@ footer .top i {
         font-size: 12px;
     }
 }
-
