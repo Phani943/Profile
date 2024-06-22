@@ -738,6 +738,7 @@ body {
     border: 2px solid #44e324;
     padding: 8px 10px;
     border-radius: 40px;
+    margin: 0 20px;
 }
 
 .project_info a span {
