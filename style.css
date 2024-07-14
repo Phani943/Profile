@@ -9,6 +9,11 @@ html {
     overflow-x: hidden;
 }
 
+::selection {
+    background: #44e324;
+    color: #000000;
+}
+
 body {
     color: #e4dede;
     background-color: #1d1515;
