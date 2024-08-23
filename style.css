@@ -9,11 +9,6 @@ html {
     overflow-x: hidden;
 }
 
-::selection {
-    background: #44e324;
-    color: #000000;
-}
-
 body {
     color: #e4dede;
     background-color: #1d1515;
@@ -888,6 +883,51 @@ form textarea {
 .connect_form textarea {
     resize: none;
     height: 220px;
+}
+
+.connect_form p {
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.email_verify, ._otp {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contact_form #user_email {
+    width: 66%;
+}
+
+#contact_form #send_otp {
+    width: 30%;
+    background-color: #44e324;
+    color: #000000;
+    cursor: pointer;   
+}
+
+#contact_form #send_otp:hover {
+    box-shadow: 0 0 5px #44e324,
+        0 0 20px #44e324;
+}
+
+._otp #verification_code {
+    width: 66%;
+}
+
+._otp #verify_otp {
+    width: 30%;
+    background-color: #44e324;
+    color: #000000;
+    cursor: pointer;   
+}
+
+._otp #verify_otp:hover {
+    box-shadow: 0 0 5px #44e324,
+        0 0 20px #44e324;
 }
 
 .connect_form form .send {
