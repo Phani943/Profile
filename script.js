@@ -131,19 +131,28 @@ document.getElementById('verify_otp').addEventListener('click', function () {
 document.getElementById('contact_form').addEventListener('submit', function (event) {
     event.preventDefault();
 
-    var formData = {
-        from_name: document.getElementById('user_name').value,
-        email_id: document.getElementById('user_email').value,
-        message: document.getElementById('message').value
-    };
+    fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+            var formData = {
+                from_name: document.getElementById('user_name').value,
+                email_id: document.getElementById('user_email').value,
+                message: document.getElementById('message').value,
+                user_ip: data.ip
+            };
 
-    emailjs.send("service_bk9fpao", "template_wnctq6s", formData)
-        .then(function (response) {
-            console.log('SUCCESS!', response.status, response.text);
-            alert('Message sent successfully!');
-            document.getElementById('contact_form').reset();
-        }, function (error) {
-            console.log('FAILED...', error);
-            alert('Message sending failed.');
+            emailjs.send("service_bk9fpao", "template_wnctq6s", formData)
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Message sent successfully!');
+                    document.getElementById('contact_form').reset();
+                }, function (error) {
+                    console.log('FAILED...', error);
+                    alert('Message sending failed.');
+                });
+        })
+        .catch(error => {
+            console.error('Error fetching IP address:', error);
+            alert('Failed to capture IP address.');
         });
 });
