@@ -10,6 +10,11 @@ const menuToggle = document.querySelector('.menu-toggle');
 const navbar = document.querySelector('.navbar');
 const navLinks = document.querySelectorAll('.nav_link');
 
+document.getElementById('message').style.display = 'none';
+document.getElementById('send_msg').style.display = 'none';
+
+// navbar.classList.remove('active');
+
 menuToggle.addEventListener('click', () => {
     navbar.classList.toggle('active');
 });
@@ -73,11 +78,13 @@ function updateDisplayedProjects(category) {
     });
 
     const projectsContainer = document.querySelector('.projects_container');
+    // Remove existing no-projects message if any
     const noProjectsMsg = projectsContainer.querySelector('.no-projects-message');
     if (noProjectsMsg) {
         projectsContainer.removeChild(noProjectsMsg);
     }
 
+    // If no projects found, display a message
     if (!projectFound) {
         const msgElement = document.createElement('div');
         msgElement.classList.add('no-projects-message');
@@ -85,6 +92,41 @@ function updateDisplayedProjects(category) {
         projectsContainer.appendChild(msgElement);
     }
 }
+
+document.getElementById('send_otp').addEventListener('click', function () {
+    var userEmail = document.getElementById('user_email').value;
+    
+    if (!userEmail.endsWith('@gmail.com')) {
+        alert('Make sure, you entered a valid Gmail address.');
+        return;
+    }
+
+    var verificationCode = Math.floor(100000 + Math.random() * 900000).toString();
+
+    sessionStorage.setItem('verificationCode', verificationCode);
+
+    emailjs.send("service_bk9fpao", "template_wh7d9r7", {
+        to_email: userEmail,
+        verification_code: verificationCode
+    }).then(function (response) {
+        alert('Verification code sent to your Gmail address.');
+    }, function (error) {
+        alert('Failed to send verification code.');
+    });
+});
+
+document.getElementById('verify_otp').addEventListener('click', function () {
+    var enteredCode = document.getElementById('verification_code').value;
+    var storedCode = sessionStorage.getItem('verificationCode');
+
+    if (enteredCode === storedCode) {
+        alert('Verification successful! You can now send your message.');
+        document.getElementById('message').style.display = 'block';
+        document.getElementById('send_msg').style.display = 'block';
+    } else {
+        alert('Verification failed. Check the code and try again.');
+    }
+});
 
 document.getElementById('contact_form').addEventListener('submit', function (event) {
     event.preventDefault();
@@ -105,4 +147,3 @@ document.getElementById('contact_form').addEventListener('submit', function (eve
             alert('Message sending failed.');
         });
 });
-
