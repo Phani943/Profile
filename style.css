@@ -1310,6 +1310,51 @@ footer .top i {
         padding: 10px;
         margin-left: 0;
     }
+
+    .email_verify, ._otp {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #contact_form #user_email {
+        width: 66%;
+    }
+
+    #contact_form #send_otp {
+        width: 30%;
+        background-color: #44e324;
+        color: #000000;
+        cursor: pointer;
+        font-size: 8px;
+        text-align: center;
+        text-wrap: wrap;
+    }
+
+    #contact_form #send_otp:hover {
+        box-shadow: 0 0 5px #44e324,
+            0 0 20px #44e324;
+    }
+
+    ._otp #verification_code {
+        width: 66%;
+    }
+
+    ._otp #verify_otp {
+        width: 30%;
+        background-color: #44e324;
+        color: #000000;
+        cursor: pointer;
+        font-size: 8px;
+        text-align: center;
+        text-wrap: wrap;   
+    }
+
+    ._otp #verify_otp:hover {
+        box-shadow: 0 0 5px #44e324,
+            0 0 20px #44e324;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1474,4 +1519,5 @@ footer .top i {
         height: 30px;
         font-size: 12px;
     }
+
 }
