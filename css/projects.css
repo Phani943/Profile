@@ -1,0 +1,312 @@
+@import "style.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: var(--font-primary), sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.projects {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 120px 2rem 60px;
+}
+
+.project_filter_section {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+}
+
+.custom_select {
+    background: var(--bg-option-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 12px 18px;
+    min-width: 220px;
+    cursor: pointer;
+    position: relative;
+    transition: var(--transition);
+    font-family: var(--font-primary), sans-serif;
+}
+
+.custom_select:hover {
+    border-color: var(--primary-color);
+}
+
+.selected_value {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-family: var(--font-display), sans-serif;
+    font-size: 12px;
+}
+
+.selected_value i {
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.custom_select.open .selected_value i {
+    transform: rotate(180deg);
+}
+
+.custom_options {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 100;
+    max-height: 280px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) transparent;
+    font-size: 12px;
+}
+
+.custom_options::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom_options::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 2px;
+}
+
+.custom_options::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 2px;
+    transition: background 0.3s ease;
+}
+
+.custom_options::-webkit-scrollbar-thumb:hover {
+    background: #2ecc71;
+}
+
+.custom_options.show {
+    display: block;
+}
+
+.custom_option {
+    padding: 12px 18px;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--text-secondary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.custom_option:last-child {
+    border-bottom: none;
+}
+
+.custom_option:hover,
+.custom_option[aria-selected="true"] {
+    background: rgba(68, 227, 36, 0.1);
+    color: var(--primary-color);
+}
+
+.projects_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.project {
+    background: var(--bg-option-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    cursor: grab;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary-color);
+}
+
+.project-image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project:hover .project-image img {
+    transform: scale(1.05) translateY(-4px);
+}
+
+.project_info {
+    padding: 1.3rem 1.3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project_info h3 {
+    font-family: var(--font-display), sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.7rem;
+    line-height: 1.3;
+}
+
+.project_info p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+    min-height: 0;
+}
+
+.project-actions {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    bottom: 1.3rem;
+    left: 1.3rem;
+    right: 1.3rem;
+    margin-top: 0;
+    position: absolute;
+}
+
+.view-code-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 9px 16px;
+    background: var(--primary-gradient);
+    color: #000;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: var(--transition);
+    border: 1px solid var(--primary-color);
+}
+
+.view-code-btn span, .demo-btn span {
+    font-family: var(--font-display), sans-serif;
+}
+
+.view-code-btn:hover {
+    background: var(--primary-color);
+    box-shadow: 0 0 15px rgba(68, 227, 36, 0.4);
+    transform: translateY(-2px);
+}
+
+.demo-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 9px 16px;
+    background: transparent;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    border: 1px solid var(--primary-color);
+    transition: var(--transition);
+}
+
+.demo-btn:hover {
+    background: rgba(68, 227, 36, 0.1);
+    transform: translateY(-2px);
+}
+
+.empty-state-message {
+    text-align: center;
+    padding: 4rem 2rem;
+    margin: 2rem 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.empty-state-message h3 {
+    font-family: var(--font-display), sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.empty-state-message p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    z-index: 100;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: black;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-radius: 30%;
+    font-size: 18px;
+    display: none;
+    margin-bottom: 40px;
+    transition: background-color 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    box-shadow: 0 10px 30px rgba(68, 227, 36, 0.4);
+}

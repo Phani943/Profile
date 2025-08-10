@@ -1,0 +1,982 @@
+@import "style.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary), sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.about-page {
+    margin-top: 100px;
+}
+
+.about-content {
+    padding: 60px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.intro-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--border-radius-lg);
+    padding: 3rem;
+    backdrop-filter: blur(20px);
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--primary-gradient);
+    opacity: 0.5;
+}
+
+.intro-card h2 {
+    font-family: var(--font-display), sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.section-title {
+    font-family: var(--font-display), sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary-gradient);
+    border-radius: 2px;
+}
+
+.skills-overview {
+    margin-bottom: 4rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.skill-item {
+    background: var(--bg-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(68, 227, 36, 0.3);
+    cursor: grab;
+}
+
+.skill-icon, .interest-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.skill-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.skill-item p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.experience-highlight {
+    margin-bottom: 4rem;
+}
+
+.experience-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--border-radius-lg);
+    padding: 2.5rem;
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--primary-gradient);
+    opacity: 0.5;
+}
+
+.experience-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    justify-content: space-between;
+}
+
+.experience-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #000;
+    flex-shrink: 0;
+}
+
+.experience-info {
+    flex: 1;
+}
+
+.experience-info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.experience-meta {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.experience-meta strong {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(68, 227, 36, 0.3);
+}
+
+.achievement-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(68, 227, 36, 0.1);
+    border: 1px solid rgba(68, 227, 36, 0.3);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    animation: highlightGlow 3s infinite ease-in-out;
+    cursor: grab;
+}
+
+.experience-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.competition-details {
+    background: rgba(68, 227, 36, 0.03);
+    border: 1px solid rgba(68, 227, 36, 0.1);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.competition-details h4 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.danger-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.5rem;
+}
+
+.danger-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: rgba(68, 227, 36, 0.05);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.danger-list li i,
+.danger-list li img {
+    width: 16px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.danger-list li i {
+    color: var(--primary-color);
+    width: 16px;
+    text-align: center;
+}
+
+.danger-list li img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 0;
+    filter: brightness(0) saturate(100%) invert(56%) sepia(79%) saturate(2771%) hue-rotate(87deg) brightness(92%) contrast(90%);
+}
+
+.competition-details p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.competition-details strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.interests-section {
+    margin-bottom: 4rem;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.interest-item {
+    background: var(--bg-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.interest-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(68, 227, 36, 0.3);
+    cursor: grab;
+}
+
+.shuttle-icon img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0);
+}
+
+.interest-item h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.interest-item p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.cta-section {
+    margin-bottom: 4rem;
+}
+
+.cta-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--border-radius-lg);
+    padding: 3rem;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--primary-gradient);
+    opacity: 0.8;
+}
+
+.cta-card h2 {
+    font-family: var(--font-display), sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.cta-card p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background: var(--primary-gradient);
+    color: #000;
+    border: 1px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(68, 227, 36, 0.4);
+}
+
+.btn-secondary {
+    background: var(--bg-glass);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background: rgba(68, 227, 36, 0.1);
+    transform: translateY(-2px);
+}
+
+@keyframes highlightGlow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(68, 227, 36, 0.5);
+        background: rgba(68, 227, 36, 0.1);
+        border-color: rgba(68, 227, 36, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(68, 227, 36, 0.8), 0 0 35px rgba(68, 227, 36, 0.6);
+        background: rgba(68, 227, 36, 0.2);
+        border-color: rgba(68, 227, 36, 0.6);
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+        padding: 0 3rem;
+    }
+
+    .about-content {
+        padding: 80px 0;
+    }
+
+    .intro-card {
+        padding: 4rem;
+    }
+
+    .intro-card h2 {
+        font-size: 2.8rem;
+    }
+
+    .intro-text {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 1199px) {
+    .container {
+        max-width: 1000px;
+        padding: 0 2rem;
+    }
+
+    .intro-card h2 {
+        font-size: 2.2rem;
+    }
+
+    .intro-text {
+        font-size: 1.1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 991px) {
+    .about-page {
+        margin-top: 80px;
+    }
+
+    .about-content {
+        padding: 40px 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .intro-card {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .intro-card h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .skills-overview,
+    .experience-highlight,
+    .interests-section,
+    .cta-section {
+        margin-bottom: 3rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .experience-card {
+        padding: 2rem;
+    }
+
+    .experience-header {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .experience-meta {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .experience-info {
+        display: flex;
+        flex: 1 1 50%;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .experience-info p strong {
+        margin: 0 12px;
+    }
+
+    .achievement-badge {
+        flex: 1 1 30%;
+    }
+
+    .achievement-badge {
+        justify-content: center;
+    }
+
+    .experience-content p {
+        font-size: 0.8rem;
+    }
+
+    .danger-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .danger-list li {
+        flex: 0 1 45%;
+    }
+
+    .competition-details p:last-child {
+        font-size: 0.9rem;
+    }
+
+    .skills-grid {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .skills-overview .section-title {
+        margin-bottom: 60px;
+    }
+
+    .skill-item {
+        flex: 0 1 40%;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.5rem;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .skill-item p {
+        font-size: 0.75rem !important;
+    }
+
+    .interests-grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .interests-section .section-title {
+        margin-bottom: 60px;
+    }
+
+    .interest-item p {
+        font-size: 0.75rem !important;
+    }
+
+    .shuttle-icon img {
+        width: 24px;
+        height: 24px;
+        filter: brightness(0);
+    }
+
+    .cta-card {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-page {
+        margin-top: 120px;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .intro-card {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .intro-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .intro-text {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .section-title::after {
+        width: 50px;
+        height: 2px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .skill-item {
+        padding: 1.5rem;
+    }
+
+    .skill-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .skill-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .experience-card {
+        padding: 1.5rem;
+    }
+
+    .experience-header {
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .experience-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .experience-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .experience-info p {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .experience-info p strong {
+        margin: 0 12px;
+    }
+
+    .experience-meta {
+        font-size: 0.9rem;
+    }
+
+    .achievement-badge {
+        order: 1;
+        flex: 0 0 60%;
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+    }
+
+    .competition-details {
+        padding: 1.2rem;
+    }
+
+    .danger-list {
+        grid-template-columns: 1fr;
+        gap: 0.4rem;
+    }
+
+    .danger-list li {
+        padding: 0.4rem;
+        font-size: 0.85rem;
+    }
+
+    .interests-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        max-width: none;
+    }
+
+    .interest-item {
+        padding: 1.5rem;
+    }
+
+    .interest-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .cta-card {
+        padding: 1.5rem;
+    }
+
+    .cta-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .cta-card p {
+        font-size: 1rem;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .cta-buttons a {
+        flex: 0 1 45%;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .container {
+        padding: 0 0.8rem;
+    }
+
+    .intro-card {
+        padding: 1.2rem;
+    }
+
+    .intro-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .intro-text {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .skill-item,
+    .interest-item {
+        padding: 1.2rem;
+    }
+
+    .skill-icon,
+    .interest-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    .experience-card {
+        padding: 1.2rem;
+    }
+
+    .experience-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    .experience-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .competition-details {
+        padding: 1rem;
+    }
+
+    .danger-list li {
+        padding: 0.3rem;
+        font-size: 0.8rem;
+    }
+
+    .cta-card {
+        padding: 1.2rem;
+    }
+
+    .cta-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .cta-card p {
+        font-size: 0.95rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 0.9rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 479px) {
+    .about-content {
+        padding: 20px 0;
+    }
+
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    .intro-card {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    .intro-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .intro-text {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .section-title {
+        font-size: 1.1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .section-title::after {
+        width: 40px;
+        height: 2px;
+    }
+
+    .skill-item,
+    .interest-item {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    .skill-icon,
+    .interest-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .skill-item h3,
+    .interest-item h4 {
+        font-size: 1rem;
+    }
+
+    .skill-item p,
+    .interest-item p {
+        font-size: 0.8rem;
+    }
+
+    .experience-card {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    .experience-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .experience-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .experience-meta {
+        font-size: 0.8rem;
+    }
+
+    .achievement-badge {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .competition-details {
+        padding: 0.8rem;
+    }
+
+    .competition-details h4 {
+        font-size: 1rem;
+    }
+
+    .danger-list li {
+        padding: 0.25rem;
+        font-size: 0.75rem;
+    }
+
+    .danger-list li img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .cta-card {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    .cta-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .cta-card p {
+        font-size: 0.9rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.85rem;
+        border-radius: 12px;
+    }
+}

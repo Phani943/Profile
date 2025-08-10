@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <title>Contact</title>
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">Phani Chaitanya</a>
+    <div class="menu-toggle"><i class="bx bx-menu"></i></div>
+    <nav class="navbar">
+        <a href="index.html" class="nav_link">Home</a>
+        <a href="skills.html" class="nav_link">Skills</a>
+        <a href="projects.html" class="nav_link">Projects</a>
+        <a href="freelancing.html" class="nav_link">Freelancing</a>
+        <a href="contact.html" class="nav_link active">Contact</a>
+        <a href="about.html" class="nav_link">About</a>
+    </nav>
+</header>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+
+            <div class="contact-info-card">
+                <div class="card-header">
+                    <h2>Get In Touch</h2>
+                    <p>I'm always excited to discuss new projects and opportunities</p>
+                </div>
+
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="method-info">
+                            <h4>Email</h4>
+                            <p>phanichaitanya63@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="method-info">
+                            <h4>Location</h4>
+                            <p>Bhimavaram, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="method-info">
+                            <h4>Response Time</h4>
+                            <p>Usually within 24 hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <h4>Find me on</h4>
+                    <div class="social-icons">
+                        <a href="https://github.com/Phani943" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/phani-chaitanya-ba5899252" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/phani_medicherla" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/phani.m.5201?mibextid=ZbWKwL" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-card">
+                <div class="card-header">
+                    <h2>Send Message</h2>
+                    <p>Verify your email to ensure secure communication. Once you are verified, you can send message.</p>
+                </div>
+
+                <form id="contact_form" class="modern-form">
+                    <div class="form-group">
+                        <label for="user_name">Full Name</label>
+                        <input type="text" id="user_name" name="user_name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group email-verification-group">
+                        <label for="user_email">Email Address</label>
+                        <div class="email-input-wrapper">
+                            <input type="email" id="user_email" name="user_email" placeholder="your.email@gmail.com" required>
+                            <button type="button" id="send_otp" class="otp-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Send OTP</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group otp-group" id="otp_section">
+                        <label for="verification_code">Verification Code</label>
+                        <div class="otp-input-wrapper">
+                            <input type="text" id="verification_code" placeholder="Enter 6-digit code" maxlength="6" required>
+                            <button type="button" id="verify_otp" class="verify-btn">
+                                <i class="fas fa-check"></i>
+                                <span>Verify</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="contact-choice-section" id="contact_choice_section" style="display: none;">
+                        <div class="choice-header">
+                            <div class="success-indicator">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Email Verified Successfully!</span>
+                            </div>
+                            <h3>How would you like to connect?</h3>
+                            <p>Choose your preferred way to discuss your project</p>
+                        </div>
+
+                        <div class="contact-choices">
+                            <div class="contact-choice" id="message_choice">
+                                <div class="choice-icon">
+                                    <i class="fas fa-comment-dots"></i>
+                                </div>
+                                <div class="choice-content">
+                                    <h4>Send Message</h4>
+                                    <p>Write a detailed message and get a response within 24 hours</p>
+                                </div>
+                                <div class="choice-arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+
+                            <div class="contact-choice" id="phone_choice">
+                                <div class="choice-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="choice-content">
+                                    <h4>Call Me</h4>
+                                    <p>Get my phone number for immediate discussion</p>
+                                </div>
+                                <div class="choice-arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group message-hidden-group" id="hidden_msg_section" style="display: none;">
+                        <div class="form-group message-group" id="message_section">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Tell me about your project, ideas, or just say hello..." required></textarea>
+                        </div>
+
+                        <button type="submit" id="send_msg" class="submit-btn">
+                            <i class="fas fa-rocket"></i>
+                            <span>Send Message</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </div>
+
+                    <div class="phone-reveal-section" id="phone_reveal_section">
+                        <div class="phone-reveal-content">
+                            <div class="phone-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h4>Call Me Directly</h4>
+                            <div class="phone-display">
+                                <a href="tel:+919381891353" class="phone-number">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>+91 93818 91353</span>
+                                </a>
+                            </div>
+                            <div class="phone-timing">
+                                <i class="fas fa-clock"></i>
+                                <span>Available: Monday - Friday, 9 AM - 6 PM IST</span>
+                            </div>
+                            <button type="button" id="back_to_choices" class="back-to-choices-btn">
+                                <i class="fas fa-arrow-left"></i>
+                                <span>Back to Options</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="modern-footer">
+    <div class="footer-content">
+        <p>Crafted with <i class="fas fa-heart"></i> by Phani Chaitanya</p>
+    </div>
+</footer>
+
+<script src="js/contact.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
