@@ -96,7 +96,7 @@
         verifyBtn.disabled = true;
 
         setTimeout(() => {
-            if (enteredCode === verificationCode || enteredCode === "000000") {
+            if (enteredCode === verificationCode) {
                 showNotification('Email verified successfully!', 'success');
                 isEmailVerified = true;
                 verifyBtn.innerHTML = '<i class="fas fa-check"></i><span>Verified</span>';
