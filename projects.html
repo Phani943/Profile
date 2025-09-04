@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Projects</title>
 
-    <link rel="icon" type="image/x-icon" href="Logos/p_logo.svg">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
@@ -14,253 +13,273 @@
 </head>
 
 <body>
-    <header class="header">
-        <a href="index.html" class="logo">Phani Chaitanya</a>
-        <div class="menu-toggle"><i class="bx bx-menu"></i></div>
-        <nav class="navbar">
-            <a href="index.html" class="nav_link">Home</a>
-            <a href="skills.html" class="nav_link">Skills</a>
-            <a href="projects.html" class="nav_link active">Projects</a>
-            <a href="freelancing.html" class="nav_link">Freelancing</a>
-            <a href="contact.html" class="nav_link">Contact</a>
-            <a href="about.html" class="nav_link">About</a>
-        </nav>
-    </header>
+<header class="header">
+    <a href="index.html" class="logo">Phani Chaitanya</a>
+    <div class="menu-toggle"><i class="bx bx-menu"></i></div>
+    <nav class="navbar">
+        <a href="index.html" class="nav_link">Home</a>
+        <a href="skills.html" class="nav_link">Skills</a>
+        <a href="projects.html" class="nav_link active">Projects</a>
+        <a href="freelancing.html" class="nav_link">Freelancing</a>
+        <a href="contact.html" class="nav_link">Contact</a>
+        <a href="about.html" class="nav_link">About</a>
+    </nav>
+</header>
 
-    <main class="projects" id="projects">
-        <section class="project_filter_section">
-            <div class="custom_select" tabindex="0" role="listbox" aria-label="Project Category Filter">
-                <div class="selected_value" aria-live="polite" aria-atomic="true">
-                    <span>All Categories</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="custom_options" role="list">
-                    <div class="custom_option" data-value="all" role="option" tabindex="-1" aria-selected="true">All Categories</div>
-                    <div class="custom_option" data-value="computer_vision" role="option" tabindex="-1">Computer Vision</div>
-                    <div class="custom_option" data-value="deep_learning_img" role="option" tabindex="-1">Deep Learning (Images)</div>
-                    <div class="custom_option" data-value="deep_learning_text" role="option" tabindex="-1">Deep Learning (Text)</div>
-                    <div class="custom_option" data-value="generative_ai" role="option" tabindex="-1">Generative AI</div>
-                    <div class="custom_option" data-value="nlp" role="option" tabindex="-1">NLP</div>
-                    <div class="custom_option" data-value="object_detection" role="option" tabindex="-1">Object Detection</div>
-                    <div class="custom_option" data-value="reinforcement_learning" role="option" tabindex="-1">Reinforcement Learning</div>
-                    <div class="custom_option" data-value="robotics" role="option" tabindex="-1">Robotics</div>
+<main class="projects" id="projects">
+    <section class="project_filter_section">
+        <div class="custom_select" tabindex="0" role="listbox" aria-label="Project Category Filter">
+            <div class="selected_value" aria-live="polite" aria-atomic="true">
+                <span>All Categories</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="custom_options" role="list">
+                <div class="custom_option" data-value="all" role="option" tabindex="-1" aria-selected="true">All Categories</div>
+                <div class="custom_option" data-value="web_development" role="option" tabindex="-1">Web Development</div>
+                <div class="custom_option" data-value="deep_learning_vision" role="option" tabindex="-1">Deep Learning (Vision)</div>
+                <div class="custom_option" data-value="deep_learning_text" role="option" tabindex="-1">Deep Learning (Text)</div>
+                <div class="custom_option" data-value="generative_ai" role="option" tabindex="-1">Generative AI</div>
+                <div class="custom_option" data-value="nlp" role="option" tabindex="-1">Natural Language Processing</div>
+                <div class="custom_option" data-value="robotics_simulation" role="option" tabindex="-1">Robotics & Simulation</div>
+                <div class="custom_option" data-value="reinforcement_learning" role="option" tabindex="-1">Reinforcement Learning</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects_container" aria-live="polite" aria-relevant="additions">
+
+        <article class="project featured" data-category="web_development">
+            <div class="project-image">
+                <img src="Images/byteswap_app.png" alt="ByteSwap - Real-time Chat Application" loading="lazy" />
+            </div>
+            <div class="project_info">
+                <h3>ByteSwap - Real-time Chat App</h3>
+                <p>A full-stack real-time chat application with skill-based matching, JWT authentication, and anonymous messaging. Built with React, Node.js, Socket.io, and MongoDB, deployed on Render with seamless user experience.</p>
+                <div class="project-actions">
+                    <a href="https://github.com/Phani943/ByteSwap" target="_blank" rel="noopener noreferrer" class="view-code-btn">
+                        <i class="fab fa-github"></i>
+                        <span>View Code</span>
+                    </a>
+                    <a href="https://byteswap-app.onrender.com" target="_blank" rel="noopener noreferrer" class="demo-btn">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>Try it</span>
+                    </a>
                 </div>
             </div>
-        </section>
+        </article>
 
-        <section class="projects_container" aria-live="polite" aria-relevant="additions">
-            <article class="project" data-category="deep_learning_text">
-                <div class="project-image">
-                    <img src="Images/eng_hin_translation.png" alt="English to Hindi Translation (Seq2Seq LSTM)" loading="lazy" />
+        <article class="project" data-category="deep_learning_text">
+            <div class="project-image">
+                <img src="Images/eng_hin_translation.png" alt="English to Hindi Translation (Seq2Seq LSTM)" loading="lazy" />
+            </div>
+            <div class="project_info">
+                <h3>English → Hindi Translation</h3>
+                <p>From 'Hello' to 'नमस्ते' in milliseconds — this sequence-to-sequence with LSTM translation engine bridges English and Hindi with speed and precision.</p>
+                <div class="project-actions">
+                    <a href="https://github.com/Phani943/English_To_Hindi" target="_blank" rel="noopener noreferrer" class="view-code-btn">
+                        <i class="fab fa-github"></i>
+                        <span>View Code</span>
+                    </a>
                 </div>
-                <div class="project_info">
-                    <h3>English → Hindi Translation</h3>
-                    <p>From ‘Hello’ to ‘नमस्ते’ in milliseconds — this sequence-to-sequence with LSTM translation engine bridges English and Hindi with speed and precision.</p>
-                    <div class="project-actions">
-                        <a href="https://github.com/Phani943/English_To_Hindi" target="_blank" rel="noopener noreferrer" class="view-code-btn">
-                            <i class="fab fa-github"></i>
-                            <span>View Code</span>
-                        </a>
-                    </div>
-                </div>
-            </article>
+            </div>
+        </article>
 
-            <article class="project" data-category="robotics_pose_detection">
-                <div class="project-image">
-                    <img src="Images/harro_robot_pose.png" alt="Harro Robot Pose Detection with ROS2" loading="lazy" />
+        <article class="project" data-category="robotics_simulation">
+            <div class="project-image">
+                <img src="Images/harro_robot_pose.png" alt="Harro Robot Pose Detection with ROS2" loading="lazy" />
+            </div>
+            <div class="project_info">
+                <h3>Harro Robot - Pose Detection</h3>
+                <p>Meet Harro: a Blender-designed robot performs real-time human pose estimation in a ROS2 Gazebo simulation environment. Bringing robotics and AI together.</p>
+                <div class="project-actions">
+                    <a href="https://github.com/Phani943/Pose_Detection_with_Robot" target="_blank" rel="noopener noreferrer" class="view-code-btn">
+                        <i class="fab fa-github"></i>
+                        <span>View Code</span>
+                    </a>
                 </div>
-                <div class="project_info">
-                    <h3>Harro Robot - Pose Detection</h3>
-                    <p>Meet Harro: a Blender-designed robot performs real-time human pose estimation in a ROS2 Gazebo simulation environment. Bringing robotics and AI together.</p>
-                    <div class="project-actions">
-                        <a href="https://github.com/Phani943/Pose_Detection_with_Robot" target="_blank" rel="noopener noreferrer" class="view-code-btn">
-                            <i class="fab fa-github"></i>
-                            <span>View Code</span>
-                        </a>
-                    </div>
-                </div>
-            </article>
+            </div>
+        </article>
 
-            <article class="project" data-category="object_detection">
-                <div class="project-image">
-                    <img src="Images/localization.png" alt="Image Localization and Classification" loading="lazy" />
+        <article class="project" data-category="deep_learning_vision">
+            <div class="project-image">
+                <img src="Images/localization.png" alt="Image Localization and Classification" loading="lazy" />
+            </div>
+            <div class="project_info">
+                <h3>Image Localization and Classification</h3>
+                <p>Imagine a model that not only identifies but also pinpoints the location of everyday objects like an AC, fan, or stove! This powerful localization model offers precise object detection, enhancing everyday applications with advanced capabilities.</p>
+                <div class="project-actions">
+                    <a href="https://github.com/Phani943/Object_Localization" target="_blank" rel="noopener noreferrer" class="view-code-btn">
+                        <i class="fab fa-github"></i>
+                        <span>View Code</span>
+                    </a>
                 </div>
-                <div class="project_info">
-                    <h3>Image Localization and Classification</h3>
-                    <p>Imagine a model that not only identifies but also pinpoints the location of everyday objects like an AC, fan, or stove! This powerful localization model offers precise object detection, enhancing everyday applications with advanced capabilities.</p>
-                    <div class="project-actions">
-                        <a href="https://github.com/Phani943/Object_Localization" target="_blank" rel="noopener noreferrer" class="view-code-btn">
-                            <i class="fab fa-github"></i>
-                            <span>View Code</span>
-                        </a>
-                    </div>
-                </div>
-            </article>
+            </div>
+        </article>
 
-            <article class="project" data-category="deep_learning_img deep_learning_text">
-                <div class="project-image">
-                    <img src="Images/img_captioning.png" alt="Image Captioning" loading="lazy" />
+        <article class="project" data-category="generative_ai">
+            <div class="project-image">
+                <img src="Images/img_captioning.png" alt="Image Captioning" loading="lazy" />
+            </div>
+            <div class="project_info">
+                <h3>Image Captioning</h3>
+                <p>Explore a model that generates descriptive captions for images, bridging the gap between visual content and natural language. This project demonstrates how AI can understand and describe the content of an image.</p>
+                <div class="project-actions">
+                    <a href="https://github.com/Phani943/Image-Captioning" target="_blank" rel="noopener noreferrer" class="view-code-btn">
+                        <i class="fab fa-github"></i>
+                        <span>View Code</span>
+                    </a>
                 </div>
-                <div class="project_info">
-                    <h3>Image Captioning</h3>
-                    <p>Explore a model that generates descriptive captions for images, bridging the gap between visual content and natural language. This project demonstrates how AI can understand and describe the content of an image.</p>
-                    <div class="project-actions">
-                        <a href="https://github.com/Phani943/Image-Captioning" target="_blank" rel="noopener noreferrer" class="view-code-btn">
-                            <i class="fab fa-github"></i>
-                            <span>View Code</span>
-                        </a>
-                    </div>
-                </div>
-            </article>
+            </div>
+        </article>
 
-            <article class="project" data-category="generative_ai">
-                <div class="project-image">
-                    <img src="Images/mnist_gan.png" alt="MNIST Generator" loading="lazy" />
+        <article class="project" data-category="generative_ai">
+            <div class="project-image">
+                <img src="Images/mnist_gan.png" alt="MNIST Generator" loading="lazy" />
+            </div>
+            <div class="project_info">
+                <h3>MNIST Digit Generator (GAN)</h3>
+                <p>My project features a cutting-edge Generative Adversarial Network (GAN) that generates realistic handwritten digits ranging from 0 to 9. Trained on the widely-used MNIST dataset.</p>
+                <div class="project-actions">
+                    <a href="https://github.com/Phani943/MNIST_DIGIT_GENERATOR" target="_blank" rel="noopener noreferrer" class="view-code-btn">
+                        <i class="fab fa-github"></i>
+                        <span>View Code</span>
+                    </a>
                 </div>
-                <div class="project_info">
-                    <h3>MNIST Digit Generator (GAN)</h3>
-                    <p>My project features a cutting-edge Generative Adversarial Network (GAN) that generates realistic handwritten digits ranging from 0 to 9. Trained on the widely-used MNIST dataset.</p>
-                    <div class="project-actions">
-                        <a href="https://github.com/Phani943/MNIST_DIGIT_GENERATOR" target="_blank" rel="noopener noreferrer" class="view-code-btn">
-                            <i class="fab fa-github"></i>
-                            <span>View Code</span>
-                        </a>
-                    </div>
-                </div>
-            </article>
+            </div>
+        </article>
 
-            <article class="project" data-category="computer_vision">
-                <div class="project-image">
-                    <img src="Images/pose_estimation.png" alt="Pose Estimation" loading="lazy" />
+        <article class="project" data-category="deep_learning_vision">
+            <div class="project-image">
+                <img src="Images/pose_estimation.png" alt="Pose Estimation" loading="lazy" />
+            </div>
+            <div class="project_info">
+                <h3>Pose Estimation using MediaPipe</h3>
+                <p>The app developed using MediaPipe library to estimate the pose of a human in real-time. Post estimation can be used with webcam for various applications like augmented reality, fitness, and gaming.</p>
+                <div class="project-actions">
+                    <a href="https://github.com/Phani943/Pose_Estimation" target="_blank" rel="noopener noreferrer" class="view-code-btn">
+                        <i class="fab fa-github"></i>
+                        <span>View Code</span>
+                    </a>
+                    <a href="https://huggingface.co/spaces/Phani-1/Pose_Estimation" target="_blank" rel="noopener noreferrer" class="demo-btn">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>Try it</span>
+                    </a>
                 </div>
-                <div class="project_info">
-                    <h3>Pose Estimation using MediaPipe</h3>
-                    <p>The app developed using MediaPipe library to estimate the pose of a human in real-time. Post estimation can be used with webcam for various applications like augmented reality, fitness, and gaming.</p>
-                    <div class="project-actions">
-                        <a href="https://github.com/Phani943/Pose_Estimation" target="_blank" rel="noopener noreferrer" class="view-code-btn">
-                            <i class="fab fa-github"></i>
-                            <span>View Code</span>
-                        </a>
-                        <a href="https://huggingface.co/spaces/Phani-1/Pose_Estimation" target="_blank" rel="noopener noreferrer" class="demo-btn">
-                            <i class="fas fa-external-link-alt"></i>
-                            <span>Try it</span>
-                        </a>
-                    </div>
-                </div>
-            </article>
+            </div>
+        </article>
 
-            <article class="project" data-category="deep_learning_img">
-                <div class="project-image">
-                    <img src="Images/emotion_detection.png" alt="Emotion Detection" loading="lazy" />
+        <article class="project" data-category="deep_learning_vision">
+            <div class="project-image">
+                <img src="Images/emotion_detection.png" alt="Emotion Detection" loading="lazy" />
+            </div>
+            <div class="project_info">
+                <h3>Emotion Detection using CNN</h3>
+                <p>I developed a categorical classification model using my own CNN architecture to detect different emotions of humans. The model was trained on FER dataset from Kaggle.</p>
+                <div class="project-actions">
+                    <a href="https://github.com/Phani943/Emotion_Detection_CNN" target="_blank" rel="noopener noreferrer" class="view-code-btn">
+                        <i class="fab fa-github"></i>
+                        <span>View Code</span>
+                    </a>
                 </div>
-                <div class="project_info">
-                    <h3>Emotion Detection using CNN</h3>
-                    <p>I developed a categorical classification model using an own cnn architecture to detect different emotions of humans. The model was trained on FER dataset taken from kaggle.</p>
-                    <div class="project-actions">
-                        <a href="https://github.com/Phani943/Emotion_Detection_CNN" target="_blank" rel="noopener noreferrer" class="view-code-btn">
-                            <i class="fab fa-github"></i>
-                            <span>View Code</span>
-                        </a>
-                    </div>
-                </div>
-            </article>
+            </div>
+        </article>
 
-            <article class="project" data-category="nlp">
-                <div class="project-image">
-                    <img src="Images/imdb_review_classification.png" alt="IMDB Sentiment Analysis" loading="lazy" />
+        <article class="project" data-category="deep_learning_vision">
+            <div class="project-image">
+                <img src="Images/food_categorical.png" alt="Categorical Classification" loading="lazy" />
+            </div>
+            <div class="project_info">
+                <h3>Food CNN Classification</h3>
+                <p>A CNN model trained on a diverse dataset of labeled food images (pizza, burger, samosa, ice cream, sushi) to classify different food types with high accuracy.</p>
+                <div class="project-actions">
+                    <a href="https://github.com/Phani943/Food_CNN_Classifier" target="_blank" rel="noopener noreferrer" class="view-code-btn">
+                        <i class="fab fa-github"></i>
+                        <span>View Code</span>
+                    </a>
                 </div>
-                <div class="project_info">
-                    <h3>IMDB Sentiment Analysis</h3>
-                    <p>I've developed a natural language processing model designed to classify movie reviews as either positive or negative. Trained on the renowned IMDB dataset, the model excels in accurately categorizing new reviews.</p>
-                    <div class="project-actions">
-                        <a href="https://github.com/Phani943/Imdb_Sentiment_Analysis" target="_blank" rel="noopener noreferrer" class="view-code-btn">
-                            <i class="fab fa-github"></i>
-                            <span>View Code</span>
-                        </a>
-                    </div>
-                </div>
-            </article>
+            </div>
+        </article>
 
-            <article class="project" data-category="deep_learning_img">
-                <div class="project-image">
-                    <img src="Images/food_categorical.png" alt="Categorical Classification" loading="lazy" />
+        <article class="project" data-category="deep_learning_vision">
+            <div class="project-image">
+                <img src="Images/mnist_classification.png" alt="MNIST Classification" loading="lazy" />
+            </div>
+            <div class="project_info">
+                <h3>MNIST Classification</h3>
+                <p>A CNN model designed to recognize handwritten digits (0–9) with remarkable accuracy using the classic MNIST dataset.</p>
+                <div class="project-actions">
+                    <a href="https://github.com/Phani943/MNIST_Classification" target="_blank" rel="noopener noreferrer" class="view-code-btn">
+                        <i class="fab fa-github"></i>
+                        <span>View Code</span>
+                    </a>
                 </div>
-                <div class="project_info">
-                    <h3>Food CNN Classification</h3>
-                    <p>I developed a categorical classification model using an own cnn architecture to classify different types of foods. The model was trained on a diverse dataset of labeled images containing pizza, burger, ice cream, samosa and sushi.</p>
-                    <div class="project-actions">
-                        <a href="https://github.com/Phani943/Food_CNN_Classifier" target="_blank" rel="noopener noreferrer" class="view-code-btn">
-                            <i class="fab fa-github"></i>
-                            <span>View Code</span>
-                        </a>
-                    </div>
-                </div>
-            </article>
+            </div>
+        </article>
 
-            <article class="project" data-category="deep_learning_img">
-                <div class="project-image">
-                    <img src="Images/mnist_classification.png" alt="MNIST Classification" loading="lazy" />
+        <article class="project" data-category="deep_learning_vision">
+            <div class="project-image">
+                <img src="Images/binary_birds_classification.png" alt="Binary Classification" loading="lazy" />
+            </div>
+            <div class="project_info">
+                <h3>Bird Binary Classification</h3>
+                <p>A binary CNN classifier to distinguish between parrots and sparrows. Trained on a labeled dataset, achieving strong performance.</p>
+                <div class="project-actions">
+                    <a href="https://github.com/Phani943/BInary_Classification" target="_blank" rel="noopener noreferrer" class="view-code-btn">
+                        <i class="fab fa-github"></i>
+                        <span>View Code</span>
+                    </a>
                 </div>
-                <div class="project_info">
-                    <h3>MNIST Classification</h3>
-                    <p>I've built a robust categorical classification model specifically designed to recognize handwritten digits spanning from 0 to 9. Leveraging the well-known MNIST dataset, this model achieves remarkable accuracy.</p>
-                    <div class="project-actions">
-                        <a href="https://github.com/Phani943/MNIST_Classification" target="_blank" rel="noopener noreferrer" class="view-code-btn">
-                            <i class="fab fa-github"></i>
-                            <span>View Code</span>
-                        </a>
-                    </div>
+            </div>
+        </article>
+
+        <article class="project" data-category="nlp">
+            <div class="project-image">
+                <img src="Images/imdb_review_classification.png" alt="IMDB Sentiment Analysis" loading="lazy" />
+            </div>
+            <div class="project_info">
+                <h3>IMDB Sentiment Analysis</h3>
+                <p>An NLP model trained on the IMDB dataset to classify movie reviews as positive or negative. Highly accurate on unseen reviews.</p>
+                <div class="project-actions">
+                    <a href="https://github.com/Phani943/Imdb_Sentiment_Analysis" target="_blank" rel="noopener noreferrer" class="view-code-btn">
+                        <i class="fab fa-github"></i>
+                        <span>View Code</span>
+                    </a>
                 </div>
-            </article>
+            </div>
+        </article>
 
-            <article class="project" data-category="deep_learning_img">
-                <div class="project-image">
-                    <img src="Images/binary_birds_classification.png" alt="Binary Classification" loading="lazy" />
+        <article class="project" data-category="nlp">
+            <div class="project-image">
+                <img src="Images/spam_classification.png" alt="Email / SMS Spam Classifier" loading="lazy" />
+            </div>
+            <div class="project_info">
+                <h3>Email / SMS Spam Classifier</h3>
+                <p>AI-based spam detection system for classifying messages as spam or legitimate. Features a Streamlit web app for real-time checks.</p>
+                <div class="project-actions">
+                    <a href="https://github.com/Phani943/Email_Sms_Spam_Classifier" target="_blank" rel="noopener noreferrer" class="view-code-btn">
+                        <i class="fab fa-github"></i>
+                        <span>View Code</span>
+                    </a>
+                    <a href="https://sms-spam-classifier-by-phani.streamlit.app/" target="_blank" rel="noopener noreferrer" class="demo-btn">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>Try it</span>
+                    </a>
                 </div>
-                <div class="project_info">
-                    <h3>Bird Binary Classification</h3>
-                    <p>I developed a binary classification model using a convolutional neural network to distinguish between parrots and sparrows. The model was trained on a diverse dataset of labeled images, achieving high accuracy.</p>
-                    <div class="project-actions">
-                        <a href="https://github.com/Phani943/BInary_Classification" target="_blank" rel="noopener noreferrer" class="view-code-btn">
-                            <i class="fab fa-github"></i>
-                            <span>View Code</span>
-                        </a>
-                    </div>
-                </div>
-            </article>
+            </div>
+        </article>
 
-            <article class="project" data-category="nlp">
-                <div class="project-image">
-                    <img src="Images/spam_classification.png" alt="Email / SMS Spam Classifier" loading="lazy" />
-                </div>
-                <div class="project_info">
-                    <h3>Email / SMS Spam Classifier</h3>
-                    <p>Ever received suspicious emails or texts? My project uses AI (nlp) to distinguish between spam and legitimate messages with high accuracy. Its Streamlit interface makes it easy for anyone to check message credibility instantly.</p>
-                    <div class="project-actions">
-                        <a href="https://github.com/Phani943/Email_Sms_Spam_Classifier" target="_blank" rel="noopener noreferrer" class="view-code-btn">
-                            <i class="fab fa-github"></i>
-                            <span>View Code</span>
-                        </a>
-                        <a href="https://sms-spam-classifier-by-phani.streamlit.app/" target="_blank" rel="noopener noreferrer" class="demo-btn">
-                            <i class="fas fa-external-link-alt"></i>
-                            <span>Try it</span>
-                        </a>
-                    </div>
-                </div>
-            </article>
-        </section>
-    </main>
+    </section>
+</main>
 
-    <button id="scrollToTopBtn" title="Go to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+<button id="scrollToTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
 
-    <footer class="footer">
-        <p>Crafted with <i class="fas fa-heart"></i> by Phani Chaitanya</p>
-    </footer>
+<footer class="footer">
+    <p>Crafted with <i class="fas fa-heart"></i> by Phani Chaitanya</p>
+</footer>
 
-    <script src="js/project.js"></script>
-    <script src="js/common.js"></script>
-
+<script src="js/project.js"></script>
+<script src="js/common.js"></script>
 </body>
 </html>
