@@ -1,0 +1,7 @@
+# Ignore folders
+Quality/
+.idea/
+
+# Optional: ignore system files
+.DS_Store
+Thumbs.db
