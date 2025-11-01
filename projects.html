@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Projects - Phani Chaitanya</title>
+    <title>Projects</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -26,44 +26,23 @@
     </nav>
 </header>
 
-<main class="projects" id="projects">
-    <section class="project_filter_section">
-        <div class="custom_select" tabindex="0" role="listbox" aria-label="Project Category Filter">
-            <div class="selected_value" aria-live="polite" aria-atomic="true">
-                <span>All Categories</span>
-                <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="custom_options" role="list">
-                <div class="custom_option" data-value="all" role="option" tabindex="-1" aria-selected="true">All Categories</div>
-                <div class="custom_option" data-value="web_development" role="option" tabindex="-1">Web Development</div>
-                <div class="custom_option" data-value="deep_learning_vision" role="option" tabindex="-1">Deep Learning (Vision)</div>
-                <div class="custom_option" data-value="deep_learning_text" role="option" tabindex="-1">Deep Learning (Text)</div>
-                <div class="custom_option" data-value="generative_ai" role="option" tabindex="-1">Generative AI</div>
-                <div class="custom_option" data-value="nlp" role="option" tabindex="-1">Natural Language Processing</div>
-                <div class="custom_option" data-value="robotics_simulation" role="option" tabindex="-1">Robotics & Simulation</div>
-                <div class="custom_option" data-value="reinforcement_learning" role="option" tabindex="-1">Reinforcement Learning</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="projects_container" aria-live="polite" aria-relevant="additions">
-
-        <article class="project featured" data-category="web_development">
-            <div class="project-image">
-                <img src="Images/byteswap_app.png" alt="ByteSwap - Real-time Chat Application" loading="lazy" />
-            </div>
-            <div class="project_info">
-                <h3>ByteSwap - Real-time Chat App</h3>
-                <p>A full-stack real-time chat application with skill-based matching, JWT authentication, and anonymous messaging. Built with React, Node.js, Socket.io, and MongoDB, deployed on Render with seamless user experience.</p>
-                <div class="project-actions">
-                    <a href="https://github.com/Phani943/ByteSwap" target="_blank" rel="noopener noreferrer" class="view-code-btn">
-                        <i class="fab fa-github"></i>
-                        <span>View Code</span>
-                    </a>
-                    <a href="https://byteswap-app.onrender.com" target="_blank" rel="noopener noreferrer" class="demo-btn">
-                        <i class="fas fa-external-link-alt"></i>
-                        <span>Try it</span>
-                    </a>
+    <main class="projects" id="projects">
+        <section class="project_filter_section">
+            <div class="custom_select" tabindex="0" role="listbox" aria-label="Project Category Filter">
+                <div class="selected_value" aria-live="polite" aria-atomic="true">
+                    <span>All Categories</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="custom_options" role="list">
+                    <div class="custom_option" data-value="all" role="option" tabindex="-1" aria-selected="true">All Categories</div>
+                    <div class="custom_option" data-value="computer_vision" role="option" tabindex="-1">Computer Vision</div>
+                    <div class="custom_option" data-value="deep_learning_img" role="option" tabindex="-1">Deep Learning (Images)</div>
+                    <div class="custom_option" data-value="deep_learning_text" role="option" tabindex="-1">Deep Learning (Text)</div>
+                    <div class="custom_option" data-value="generative_ai" role="option" tabindex="-1">Generative AI</div>
+                    <div class="custom_option" data-value="nlp" role="option" tabindex="-1">NLP</div>
+                    <div class="custom_option" data-value="object_detection" role="option" tabindex="-1">Object Detection</div>
+                    <div class="custom_option" data-value="reinforcement_learning" role="option" tabindex="-1">Reinforcement Learning</div>
+                    <div class="custom_option" data-value="robotics" role="option" tabindex="-1">Robotics</div>
                 </div>
             </div>
         </article>
@@ -148,41 +127,41 @@
             </div>
         </article>
 
-        <article class="project" data-category="deep_learning_vision">
-            <div class="project-image">
-                <img src="Images/pose_estimation.png" alt="Pose Estimation" loading="lazy" />
-            </div>
-            <div class="project_info">
-                <h3>Pose Estimation using MediaPipe</h3>
-                <p>The app developed using MediaPipe library to estimate the pose of a human in real-time. Post estimation can be used with webcam for various applications like augmented reality, fitness, and gaming.</p>
-                <div class="project-actions">
-                    <a href="https://github.com/Phani943/Pose_Estimation" target="_blank" rel="noopener noreferrer" class="view-code-btn">
-                        <i class="fab fa-github"></i>
-                        <span>View Code</span>
-                    </a>
-                    <a href="https://huggingface.co/spaces/Phani-1/Pose_Estimation" target="_blank" rel="noopener noreferrer" class="demo-btn">
-                        <i class="fas fa-external-link-alt"></i>
-                        <span>Try it</span>
-                    </a>
+            <article class="project" data-category="computer_vision">
+                <div class="project-image">
+                    <img src="Images/pose_estimation.png" alt="Pose Estimation" loading="lazy" />
                 </div>
-            </div>
-        </article>
+                <div class="project_info">
+                    <h3>Pose Estimation using MediaPipe</h3>
+                    <p>The app developed using MediaPipe library to estimate the pose of a human in real-time. Post estimation can be used with webcam for various applications like augmented reality, fitness, and gaming.</p>
+                    <div class="project-actions">
+                        <a href="https://github.com/Phani943/Pose_Estimation" target="_blank" rel="noopener noreferrer" class="view-code-btn">
+                            <i class="fab fa-github"></i>
+                            <span>View Code</span>
+                        </a>
+                        <a href="https://huggingface.co/spaces/Phani-1/Pose_Estimation" target="_blank" rel="noopener noreferrer" class="demo-btn">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Try it</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
 
-        <article class="project" data-category="deep_learning_vision">
-            <div class="project-image">
-                <img src="Images/emotion_detection.png" alt="Emotion Detection" loading="lazy" />
-            </div>
-            <div class="project_info">
-                <h3>Emotion Detection using CNN</h3>
-                <p>I developed a categorical classification model using my own CNN architecture to detect different emotions of humans. The model was trained on FER dataset from Kaggle.</p>
-                <div class="project-actions">
-                    <a href="https://github.com/Phani943/Emotion_Detection_CNN" target="_blank" rel="noopener noreferrer" class="view-code-btn">
-                        <i class="fab fa-github"></i>
-                        <span>View Code</span>
-                    </a>
+            <article class="project" data-category="deep_learning_img">
+                <div class="project-image">
+                    <img src="Images/emotion_detection.png" alt="Emotion Detection" loading="lazy" />
                 </div>
-            </div>
-        </article>
+                <div class="project_info">
+                    <h3>Emotion Detection using CNN</h3>
+                    <p>I developed a categorical classification model using an own cnn architecture to detect different emotions of humans. The model was trained on FER dataset taken from kaggle.</p>
+                    <div class="project-actions">
+                        <a href="https://github.com/Phani943/Emotion_Detection_CNN" target="_blank" rel="noopener noreferrer" class="view-code-btn">
+                            <i class="fab fa-github"></i>
+                            <span>View Code</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
 
         <article class="project" data-category="deep_learning_vision">
             <div class="project-image">

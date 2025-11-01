@@ -6,6 +6,9 @@
     --success-gradient: linear-gradient(135deg, #44e324 0%, #38f9d7 100%);
     --warning-gradient: linear-gradient(135deg, #44e324 0%, #fee140 100%);
 
+    --tech-card-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    --tech-border-color: #ffffff14;
+
     --bg-primary: #12121b;
     --bg-secondary: #1a1a2e;
     --bg-glass: rgba(68, 227, 36, 0.05);
