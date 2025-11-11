@@ -90,7 +90,7 @@
             <div class="contact-form-card">
                 <div class="card-header">
                     <h2>Send Message</h2>
-                    <p>Verify your email to ensure secure communication. Once you are verified, you can send message.</p>
+                    <p>Fill out the form below and I'll get back to you as soon as possible</p>
                 </div>
 
                 <form id="contact_form" class="modern-form">
@@ -99,103 +99,71 @@
                         <input type="text" id="user_name" name="user_name" placeholder="Enter your full name" required>
                     </div>
 
-                    <div class="form-group email-verification-group">
+                    <div class="form-group">
                         <label for="user_email">Email Address</label>
-                        <div class="email-input-wrapper">
-                            <input type="email" id="user_email" name="user_email" placeholder="your.email@gmail.com" required>
-                            <button type="button" id="send_otp" class="otp-btn">
-                                <i class="fas fa-paper-plane"></i>
-                                <span>Send OTP</span>
-                            </button>
-                        </div>
+                        <input type="email" id="user_email" name="user_email" placeholder="your.email@example.com" required>
                     </div>
 
-                    <div class="form-group otp-group" id="otp_section">
-                        <label for="verification_code">Verification Code</label>
-                        <div class="otp-input-wrapper">
-                            <input type="text" id="verification_code" placeholder="Enter 6-digit code" maxlength="6" required>
-                            <button type="button" id="verify_otp" class="verify-btn">
-                                <i class="fas fa-check"></i>
-                                <span>Verify</span>
-                            </button>
-                        </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, ideas, or just say hello..." required></textarea>
                     </div>
 
-                    <div class="contact-choice-section" id="contact_choice_section" style="display: none;">
-                        <div class="choice-header">
-                            <div class="success-indicator">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Email Verified Successfully!</span>
-                            </div>
-                            <h3>How would you like to connect?</h3>
-                            <p>Choose your preferred way to discuss your project</p>
-                        </div>
-
-                        <div class="contact-choices">
-                            <div class="contact-choice" id="message_choice">
-                                <div class="choice-icon">
-                                    <i class="fas fa-comment-dots"></i>
-                                </div>
-                                <div class="choice-content">
-                                    <h4>Send Message</h4>
-                                    <p>Write a detailed message and get a response within 24 hours</p>
-                                </div>
-                                <div class="choice-arrow">
-                                    <i class="fas fa-arrow-right"></i>
-                                </div>
-                            </div>
-
-                            <div class="contact-choice" id="phone_choice">
-                                <div class="choice-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="choice-content">
-                                    <h4>Call Me</h4>
-                                    <p>Get my phone number for immediate discussion</p>
-                                </div>
-                                <div class="choice-arrow">
-                                    <i class="fas fa-arrow-right"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group message-hidden-group" id="hidden_msg_section" style="display: none;">
-                        <div class="form-group message-group" id="message_section">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" rows="6" placeholder="Tell me about your project, ideas, or just say hello..." required></textarea>
-                        </div>
-
-                        <button type="submit" id="send_msg" class="submit-btn">
-                            <i class="fas fa-rocket"></i>
-                            <span>Send Message</span>
-                            <div class="btn-glow"></div>
-                        </button>
-                    </div>
-
-                    <div class="phone-reveal-section" id="phone_reveal_section">
-                        <div class="phone-reveal-content">
-                            <div class="phone-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <h4>Call Me Directly</h4>
-                            <div class="phone-display">
-                                <a href="tel:+919381891353" class="phone-number">
-                                    <i class="fas fa-mobile-alt"></i>
-                                    <span>+91 93818 91353</span>
-                                </a>
-                            </div>
-                            <div class="phone-timing">
-                                <i class="fas fa-clock"></i>
-                                <span>Available: Monday - Friday, 9 AM - 6 PM IST</span>
-                            </div>
-                            <button type="button" id="back_to_choices" class="back-to-choices-btn">
-                                <i class="fas fa-arrow-left"></i>
-                                <span>Back to Options</span>
-                            </button>
-                        </div>
-                    </div>
+                    <button type="submit" id="send_msg" class="submit-btn">
+                        <i class="fas fa-rocket"></i>
+                        <span>Send Message</span>
+                        <div class="btn-glow"></div>
+                    </button>
                 </form>
+            </div>
+        </div>
+
+        <!-- Phone Verification Card -->
+        <div class="phone-verification-card" id="phone_verification_card">
+            <button type="button" class="phone-card-toggle" id="toggle_phone_card">
+                <div class="toggle-left">
+                    <div class="phone-toggle-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="toggle-content">
+                        <h3>Want Direct Contact?</h3>
+                        <p>Share your number and we'll get back to you within 2 hours</p>
+                    </div>
+                </div>
+                <div class="toggle-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </button>
+
+            <div class="phone-verification-content">
+                <div class="phone-input-section" id="phone_input_section">
+                    <div class="form-group">
+                        <label for="user_phone">Phone Number</label>
+                        <div class="phone-input-wrapper">
+                            <div class="country-code">
+                                <i class="fas fa-globe"></i>
+                                <span>+91</span>
+                            </div>
+                            <input type="tel" id="user_phone" placeholder="Enter 10-digit mobile number" maxlength="10" pattern="[6-9][0-9]{9}" required>
+                            <button type="button" id="submit_phone" class="submit-phone-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Submit</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phone-success-section" id="phone_success_section" style="display: none;">
+                    <div class="success-icon-large">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Request Received!</h3>
+                    <p>We have received your mobile number. Our team will get back to you within 2 hours during business hours.</p>
+                    <div class="response-timeline">
+                        <i class="fas fa-clock"></i>
+                        <span>Response Time: 1–2 Hours</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

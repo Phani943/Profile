@@ -34,14 +34,13 @@
             </div>
             <div class="custom_options" role="list">
                 <div class="custom_option" data-value="all" role="option" tabindex="-1" aria-selected="true">All Categories</div>
+                <div class="custom_option" data-value="deep_learning" role="option" tabindex="-1">Deep Learning</div>
                 <div class="custom_option" data-value="web_development" role="option" tabindex="-1">Web Development</div>
-                <div class="custom_option" data-value="deep_learning_vision" role="option" tabindex="-1">Deep Learning (Vision)</div>
-                <div class="custom_option" data-value="deep_learning_text" role="option" tabindex="-1">Deep Learning (Text)</div>
+                <div class="custom_option" data-value="mobile_apps" role="option" tabindex="-1">Mobile Apps</div>
                 <div class="custom_option" data-value="generative_ai" role="option" tabindex="-1">Generative AI</div>
-                <div class="custom_option" data-value="web_automation" role="option" tabindex="-1">Web Automation</div>
-                <div class="custom_option" data-value="nlp" role="option" tabindex="-1">Natural Language Processing</div>
-                <div class="custom_option" data-value="robotics_simulation" role="option" tabindex="-1">Robotics & Simulation</div>
-                <div class="custom_option" data-value="reinforcement_learning" role="option" tabindex="-1">Reinforcement Learning</div>
+                <div class="custom_option" data-value="automation" role="option" tabindex="-1">Automation</div>
+                <div class="custom_option" data-value="ai_ml" role="option" tabindex="-1">AI & ML</div>
+                <div class="custom_option" data-value="robotics" role="option" tabindex="-1">Robotics</div>
             </div>
         </div>
     </section>
@@ -53,6 +52,11 @@
                 <img src="Images/byteswap_app.png" alt="ByteSwap - Real-time Chat Application" loading="lazy" />
             </div>
             <div class="project_info">
+                <div class="tech-tags">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Socket.io</span>
+                </div>
                 <h3>ByteSwap - Real-time Chat App</h3>
                 <p>A full-stack real-time chat application with skill-based matching, JWT authentication, and anonymous messaging. Built with React, Node.js, Socket.io, and MongoDB, deployed on Render with seamless user experience.</p>
                 <div class="project-actions">
@@ -68,11 +72,40 @@
             </div>
         </article>
 
-        <article class="project" data-category="deep_learning_text">
+        <article class="project featured" data-category="mobile_apps">
+            <div class="project-image">
+                <img src="Images/subscription_auditor.png" alt="Subscription Auditor - Track Your Subscriptions" loading="lazy" />
+            </div>
+            <div class="project_info">
+                <div class="tech-tags">
+                    <span class="tech-tag">React Native</span>
+                    <span class="tech-tag">Expo</span>
+                    <span class="tech-tag">TypeScript</span>
+                </div>
+                <h3>Subscription Auditor</h3>
+                <p>A modern subscription management app to track and manage all your subscriptions in one place. Features include renewal reminders, analytics dashboard, category-based organization, and beautiful gradient UI with smooth animations.</p>
+                <div class="project-actions">
+                    <a href="https://github.com/Phani943/subscription-auditor" target="_blank" rel="noopener noreferrer" class="view-code-btn">
+                        <i class="fab fa-github"></i>
+                        <span>View Code</span>
+                    </a>
+                    <a href="https://github.com/Phani943/subscription-auditor/releases/latest/download/subscription-auditor.apk" target="_blank" rel="noopener noreferrer" class="demo-btn">
+                        <i class="fab fa-android"></i>
+                        <span>Download APK</span>
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <article class="project" data-category="deep_learning">
             <div class="project-image">
                 <img src="Images/eng_hin_translation.png" alt="English to Hindi Translation (Seq2Seq LSTM)" loading="lazy" />
             </div>
             <div class="project_info">
+                <div class="tech-tags">
+                    <span class="tech-tag">LSTM</span>
+                    <span class="tech-tag">NLP</span>
+                </div>
                 <h3>English → Hindi Translation</h3>
                 <p>From 'Hello' to 'नमस्ते' in milliseconds — this sequence-to-sequence with LSTM translation engine bridges English and Hindi with speed and precision.</p>
                 <div class="project-actions">
@@ -84,11 +117,16 @@
             </div>
         </article>
 
-        <article class="project" data-category="robotics_simulation">
+        <article class="project" data-category="robotics deep_learning">
             <div class="project-image">
                 <img src="Images/harro_robot_pose.png" alt="Harro Robot Pose Detection with ROS2" loading="lazy" />
             </div>
             <div class="project_info">
+                <div class="tech-tags">
+                    <span class="tech-tag">ROS2 & Gazebo</span>
+                    <span class="tech-tag">Blender</span>
+                    <span class="tech-tag">Computer Vision</span>
+                </div>
                 <h3>Harro Robot - Pose Detection</h3>
                 <p>Meet Harro: a Blender-designed robot performs real-time human pose estimation in a ROS2 Gazebo simulation environment. Bringing robotics and AI together.</p>
                 <div class="project-actions">
@@ -100,11 +138,15 @@
             </div>
         </article>
 
-        <article class="project" data-category="deep_learning_vision">
+        <article class="project" data-category="deep_learning">
             <div class="project-image">
                 <img src="Images/localization.png" alt="Image Localization and Classification" loading="lazy" />
             </div>
             <div class="project_info">
+                <div class="tech-tags">
+                    <span class="tech-tag">CNN</span>
+                    <span class="tech-tag">Computer Vision</span>
+                </div>
                 <h3>Image Localization and Classification</h3>
                 <p>Imagine a model that not only identifies but also pinpoints the location of everyday objects like an AC, fan, or stove! This powerful localization model offers precise object detection, enhancing everyday applications with advanced capabilities.</p>
                 <div class="project-actions">
@@ -121,6 +163,10 @@
                 <img src="Images/img_captioning.png" alt="Image Captioning" loading="lazy" />
             </div>
             <div class="project_info">
+                <div class="tech-tags">
+                    <span class="tech-tag">Generative AI</span>
+                    <span class="tech-tag">NLP</span>
+                </div>
                 <h3>Image Captioning</h3>
                 <p>Explore a model that generates descriptive captions for images, bridging the gap between visual content and natural language. This project demonstrates how AI can understand and describe the content of an image.</p>
                 <div class="project-actions">
@@ -137,6 +183,10 @@
                 <img src="Images/mnist_gan.png" alt="MNIST Generator" loading="lazy" />
             </div>
             <div class="project_info">
+                <div class="tech-tags">
+                    <span class="tech-tag">GAN</span>
+                    <span class="tech-tag">Generative AI</span>
+                </div>
                 <h3>MNIST Digit Generator (GAN)</h3>
                 <p>My project features a cutting-edge Generative Adversarial Network (GAN) that generates realistic handwritten digits ranging from 0 to 9. Trained on the widely-used MNIST dataset.</p>
                 <div class="project-actions">
@@ -148,11 +198,15 @@
             </div>
         </article>
 
-        <article class="project" data-category="deep_learning_vision">
+        <article class="project" data-category="deep_learning">
             <div class="project-image">
                 <img src="Images/pose_estimation.png" alt="Pose Estimation" loading="lazy" />
             </div>
             <div class="project_info">
+                <div class="tech-tags">
+                    <span class="tech-tag">MediaPipe</span>
+                    <span class="tech-tag">Computer Vision</span>
+                </div>
                 <h3>Pose Estimation using MediaPipe</h3>
                 <p>The app developed using MediaPipe library to estimate the pose of a human in real-time. Post estimation can be used with webcam for various applications like augmented reality, fitness, and gaming.</p>
                 <div class="project-actions">
@@ -168,11 +222,15 @@
             </div>
         </article>
 
-        <article class="project" data-category="web_automation">
+        <article class="project" data-category="automation">
             <div class="project-image">
                 <img src="Images/99acre_scrapper.png" alt="99AcreScrapper" loading="lazy" />
             </div>
             <div class="project_info">
+                <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Selenium</span>
+                </div>
                 <h3>99 Acre Scrapper</h3>
                 <p>A Python-based web automation tool that extracts real estate listings from 99acres.com. It automatically collects property names, prices, and details, exporting them into structured CSV files for further analysis.</p>
                 <div class="project-actions">
@@ -183,12 +241,16 @@
                 </div>
             </div>
         </article>
-        
-        <article class="project" data-category="deep_learning_vision">
+
+        <article class="project" data-category="deep_learning">
             <div class="project-image">
                 <img src="Images/emotion_detection.png" alt="Emotion Detection" loading="lazy" />
             </div>
             <div class="project_info">
+                <div class="tech-tags">
+                    <span class="tech-tag">CNN</span>
+                    <span class="tech-tag">Computer Vision</span>
+                </div>
                 <h3>Emotion Detection using CNN</h3>
                 <p>I developed a categorical classification model using my own CNN architecture to detect different emotions of humans. The model was trained on FER dataset from Kaggle.</p>
                 <div class="project-actions">
@@ -200,11 +262,15 @@
             </div>
         </article>
 
-        <article class="project" data-category="deep_learning_vision">
+        <article class="project" data-category="deep_learning">
             <div class="project-image">
                 <img src="Images/food_categorical.png" alt="Categorical Classification" loading="lazy" />
             </div>
             <div class="project_info">
+                <div class="tech-tags">
+                    <span class="tech-tag">CNN</span>
+                    <span class="tech-tag">Classification</span>
+                </div>
                 <h3>Food CNN Classification</h3>
                 <p>A CNN model trained on a diverse dataset of labeled food images (pizza, burger, samosa, ice cream, sushi) to classify different food types with high accuracy.</p>
                 <div class="project-actions">
@@ -216,11 +282,15 @@
             </div>
         </article>
 
-        <article class="project" data-category="deep_learning_vision">
+        <article class="project" data-category="deep_learning">
             <div class="project-image">
                 <img src="Images/mnist_classification.png" alt="MNIST Classification" loading="lazy" />
             </div>
             <div class="project_info">
+                <div class="tech-tags">
+                    <span class="tech-tag">CNN</span>
+                    <span class="tech-tag">Classification</span>
+                </div>
                 <h3>MNIST Classification</h3>
                 <p>A CNN model designed to recognize handwritten digits (0–9) with remarkable accuracy using the classic MNIST dataset.</p>
                 <div class="project-actions">
@@ -232,11 +302,15 @@
             </div>
         </article>
 
-        <article class="project" data-category="deep_learning_vision">
+        <article class="project" data-category="deep_learning">
             <div class="project-image">
                 <img src="Images/binary_birds_classification.png" alt="Binary Classification" loading="lazy" />
             </div>
             <div class="project_info">
+                <div class="tech-tags">
+                    <span class="tech-tag">CNN</span>
+                    <span class="tech-tag">Binary Classification</span>
+                </div>
                 <h3>Bird Binary Classification</h3>
                 <p>A binary CNN classifier to distinguish between parrots and sparrows. Trained on a labeled dataset, achieving strong performance.</p>
                 <div class="project-actions">
@@ -248,11 +322,15 @@
             </div>
         </article>
 
-        <article class="project" data-category="nlp">
+        <article class="project" data-category="ai_ml">
             <div class="project-image">
                 <img src="Images/imdb_review_classification.png" alt="IMDB Sentiment Analysis" loading="lazy" />
             </div>
             <div class="project_info">
+                <div class="tech-tags">
+                    <span class="tech-tag">NLP</span>
+                    <span class="tech-tag">Sentiment Analysis</span>
+                </div>
                 <h3>IMDB Sentiment Analysis</h3>
                 <p>An NLP model trained on the IMDB dataset to classify movie reviews as positive or negative. Highly accurate on unseen reviews.</p>
                 <div class="project-actions">
@@ -264,11 +342,15 @@
             </div>
         </article>
 
-        <article class="project" data-category="nlp">
+        <article class="project" data-category="ai_ml">
             <div class="project-image">
                 <img src="Images/spam_classification.png" alt="Email / SMS Spam Classifier" loading="lazy" />
             </div>
             <div class="project_info">
+                <div class="tech-tags">
+                    <span class="tech-tag">NLP</span>
+                    <span class="tech-tag">Classification</span>
+                </div>
                 <h3>Email / SMS Spam Classifier</h3>
                 <p>AI-based spam detection system for classifying messages as spam or legitimate. Features a Streamlit web app for real-time checks.</p>
                 <div class="project-actions">

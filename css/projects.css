@@ -23,12 +23,14 @@ main {
     flex: 1;
 }
 
+/* Projects Section */
 .projects {
     max-width: 1300px;
     margin: 0 auto;
     padding: 120px 2rem 60px;
 }
 
+/* Filter Section */
 .project_filter_section {
     display: flex;
     justify-content: flex-end;
@@ -129,12 +131,14 @@ main {
     color: var(--primary-color);
 }
 
+/* Projects Container */
 .projects_container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
 }
 
+/* Project Card */
 .project {
     background: var(--bg-option-card);
     border: 1px solid var(--border-color);
@@ -172,11 +176,38 @@ main {
     transform: scale(1.05) translateY(-4px);
 }
 
+/* Project Info */
 .project_info {
     padding: 1.3rem 1.3rem 4rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+}
+
+/* Tech Tags */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.tech-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #007AFF;
+    background: linear-gradient(135deg, rgba(0, 122, 255, 0.1), rgba(0, 122, 255, 0.05));
+    border: 2px solid rgba(0, 122, 255, 0.3);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background: linear-gradient(135deg, rgba(0, 122, 255, 0.2), rgba(0, 122, 255, 0.1));
+    border-color: rgba(0, 122, 255, 0.5);
+    transform: translateY(-2px);
 }
 
 .project_info h3 {
@@ -197,6 +228,7 @@ main {
     min-height: 0;
 }
 
+/* Project Actions */
 .project-actions {
     display: flex;
     gap: 0.8rem;
@@ -253,6 +285,7 @@ main {
     transform: translateY(-2px);
 }
 
+/* Empty State */
 .empty-state-message {
     text-align: center;
     padding: 4rem 2rem;
@@ -284,11 +317,7 @@ main {
     margin: 0 auto;
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-}
-
+/* Scroll to Top Button */
 #scrollToTopBtn {
     position: fixed;
     bottom: 40px;
@@ -309,4 +338,23 @@ main {
 
 #scrollToTopBtn:hover {
     box-shadow: 0 10px 30px rgba(68, 227, 36, 0.4);
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tech-tags {
+        gap: 6px;
+        margin-bottom: 10px;
+    }
+
+    .tech-tag {
+        font-size: 11px;
+        padding: 3px 10px;
+    }
 }
