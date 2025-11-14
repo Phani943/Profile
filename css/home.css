@@ -326,7 +326,7 @@ body {
 
 @media (min-width: 1200px) {
     .home {
-        padding: 70px 8% 0;
+        padding: 70px 8% 0 70px;
     }
 
     .home_content {
