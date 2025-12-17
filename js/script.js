@@ -1,11 +1,11 @@
 const typed = new Typed(".text", {
     strings: [
+        "design modern websites",
         "build smart AI models",
-        "develop desktop applications",
         "create beautiful mobile apps",
+        "develop desktop applications",
         "craft tools with Python",
-        "build smart web scrapers",
-        "design modern websites"
+        "build smart web scrapers"
     ],
     typeSpeed: 50,
     backSpeed: 40,
