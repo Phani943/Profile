@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const navbar = document.querySelector('.navbar');
     const navOverlay = document.querySelector('.nav-overlay');
+    let lockedScrollY = 0;
 
     const setMenuState = (isOpen) => {
         if (!menuToggle || !navbar) {
@@ -14,7 +15,20 @@ document.addEventListener('DOMContentLoaded', function() {
         if (navOverlay) {
             navOverlay.classList.toggle('active', isOpen);
         }
-        document.body.classList.toggle('menu-open', isOpen);
+
+        if (isOpen) {
+            if (!document.body.classList.contains('menu-open')) {
+                lockedScrollY = window.scrollY || window.pageYOffset || 0;
+                document.body.style.top = `-${lockedScrollY}px`;
+                document.body.classList.add('menu-open');
+            }
+        } else if (document.body.classList.contains('menu-open')) {
+            const topValue = parseInt(document.body.style.top || '0', 10);
+            document.body.classList.remove('menu-open');
+            document.body.style.top = '';
+            window.scrollTo(0, Math.abs(topValue || lockedScrollY));
+        }
+
         menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     };
 

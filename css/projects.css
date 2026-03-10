@@ -27,7 +27,8 @@ main {
 .projects {
     max-width: 1300px;
     margin: 0 auto;
-    padding: 120px 2rem 60px;
+    width: 100%;
+    padding: 120px 5% 60px;
 }
 
 /* Filter Section */
@@ -134,7 +135,7 @@ main {
 /* Projects Container */
 .projects_container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
     gap: 2rem;
 }
 
@@ -321,7 +322,7 @@ main {
 #scrollToTopBtn {
     position: fixed;
     bottom: 40px;
-    right: 30px;
+    right: 5%;
     z-index: 100;
     border: none;
     outline: none;
@@ -332,7 +333,6 @@ main {
     border-radius: 30%;
     font-size: 18px;
     display: none;
-    margin-bottom: 40px;
     transition: background-color 0.3s;
 }
 
@@ -348,6 +348,14 @@ main {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .projects {
+        padding: 110px 5% 45px;
+    }
+
+    .projects_container {
+        gap: 1.5rem;
+    }
+
     .tech-tags {
         gap: 6px;
         margin-bottom: 10px;
@@ -356,5 +364,15 @@ main {
     .tech-tag {
         font-size: 11px;
         padding: 3px 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .projects {
+        padding: 105px 4% 40px;
+    }
+
+    #scrollToTopBtn {
+        right: 4%;
     }
 }
