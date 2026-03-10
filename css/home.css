@@ -89,13 +89,33 @@ body {
 
 .home_content #intro_para {
     font-size: 18px;
-    line-height: 30px;
-    letter-spacing: 2px;
+    line-height: 27px;
+    letter-spacing: 1px;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
     font-family: var(--font-styled), sans-serif;
     color: var(--text-secondary);
+}
+
+.agency-note {
+    margin-top: 1rem;
+    color: var(--text-secondary);
+    font-family: var(--font-styled), sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.agency-note a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(68, 227, 36, 0.4);
+}
+
+.agency-note a:hover {
+    color: #2ecc71;
+    border-bottom-color: #2ecc71;
 }
 
 .home_connect a {

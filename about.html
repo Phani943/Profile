@@ -14,15 +14,19 @@
 
 <header class="header">
     <a href="index.html" class="logo">Phani Chaitanya</a>
-    <div class="menu-toggle"><i class="bx bx-menu"></i></div>
-    <nav class="navbar">
+    <button class="menu-toggle" id="mobileToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+    </button>
+    <nav class="navbar" id="navLinks">
         <a href="index.html" class="nav_link">Home</a>
         <a href="skills.html" class="nav_link">Skills</a>
         <a href="projects.html" class="nav_link">Projects</a>
-        <a href="freelancing.html" class="nav_link">Freelancing</a>
         <a href="contact.html" class="nav_link">Contact</a>
         <a href="about.html" class="nav_link active">About</a>
     </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
 </header>
 
 <main class="about-page">
